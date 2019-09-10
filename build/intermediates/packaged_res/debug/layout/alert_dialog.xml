@@ -152,6 +152,13 @@
             android:visibility="gone"
             android:text="@string/dialog_cancel" />
 
+        <Button
+            android:id="@+id/natural_button"
+            style="@style/dialog_blue_button"
+            android:background="@drawable/gray_button_background"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:text="@string/dialog_cancel" />
 
         <Button
             android:id="@+id/confirm_button"

@@ -39,6 +39,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     private boolean mShowContent;
     private String mCancelText;
     private String mConfirmText;
+    private String mNeutralText;
     private int mAlertType;
     private FrameLayout mErrorFrame;
     private FrameLayout mSuccessFrame;
@@ -51,10 +52,12 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     private ImageView mCustomImage;
     private Button mConfirmButton;
     private Button mCancelButton;
+    private Button mNeutralButton;
     private ProgressHelper mProgressHelper;
     private FrameLayout mWarningFrame;
     private OnSweetClickListener mCancelClickListener;
     private OnSweetClickListener mConfirmClickListener;
+    private OnSweetClickListener mNaturalClickListener;
     private boolean mCloseFromCancel;
 
     public static final int NORMAL_TYPE = 0;
@@ -157,6 +160,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         mCustomImage = (ImageView) findViewById(R.id.custom_image);
         mWarningFrame = (FrameLayout) findViewById(R.id.warning_frame);
         mConfirmButton = (Button) findViewById(R.id.confirm_button);
+        mNeutralButton= (Button) findViewById(R.id.natural_button);
         mCancelButton = (Button) findViewById(R.id.cancel_button);
         mProgressHelper.setProgressWheel((ProgressWheel) findViewById(R.id.progressWheel));
 
@@ -183,6 +187,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         setContentText(mContentText);
         setCancelText(mCancelText);
         setConfirmText(mConfirmText);
+        setNeutralText(mNeutralText);
         changeAlertType(mAlertType, true);
 
     }
@@ -333,6 +338,21 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         return this;
     }
 
+    public SweetAlertDialog setNeutralText(String text) {
+        mNeutralText = text;
+        if (mNeutralButton != null && mNeutralText != null) {
+            showCancelButton(true);
+            mNeutralButton.setText(mNeutralText);
+        }
+        return this;
+    }
+
+
+    public String getNeutralText()
+    {
+      return   mNeutralText;
+    }
+
     public String getConfirmText() {
         return mConfirmText;
     }
@@ -345,6 +365,8 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         return this;
     }
 
+
+
     public SweetAlertDialog setCancelClickListener(OnSweetClickListener listener) {
         mCancelClickListener = listener;
         return this;
@@ -354,6 +376,13 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         mConfirmClickListener = listener;
         return this;
     }
+
+    public SweetAlertDialog setNeutralClickListener(OnSweetClickListener listener) {
+        mNaturalClickListener = listener;
+        return this;
+    }
+
+
 
     protected void onStart() {
         mDialogView.startAnimation(mModalInAnim);
@@ -396,6 +425,15 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
                 dismissWithAnimation();
             }
         }
+
+        else if (v.getId() == R.id.natural_button) {
+            if (mNaturalClickListener != null) {
+                mNaturalClickListener.onClick(SweetAlertDialog.this);
+            } else {
+                dismissWithAnimation();
+            }
+        }
+
     }
 
     public ProgressHelper getProgressHelper() {

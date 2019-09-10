@@ -17,8 +17,8 @@ public class Rotate3dAnimation extends Animation {
 
     private float mFromDegrees;
     private float mToDegrees;
-    private float mPivotX;
-    private float mPivotY;
+    private float mPivotX=50;
+    private float mPivotY=50;
     private Camera mCamera;
     private int mRollType;
 
