@@ -2,13 +2,13 @@ Sweet Alert Dialog
 ===================
 SweetAlert for Android, a beautiful and clever alert dialog
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Sweet%20Alert%20Dialog-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1065)
+[![JitPack:Version](https://jitpack.io/v/lahiru04/sweetalert.svg)](https://jitpack.io/#lahiru04/sweetalert) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[中文版](https://github.com/pedant/sweet-alert-dialog/blob/master/README.zh.md)
 
 Inspired by JavaScript [SweetAlert](http://tristanedwards.me/sweetalert)
 
-[Demo Download](https://github.com/pedant/sweet-alert-dialog/releases/download/v1.1/sweet-alert-sample-v1.1.apk)
+Credit goes to [original developers](https://github.com/pedant/sweet-alert-dialog). Several changes are done. Also support to android x.
+
 
 ## ScreenShot
 ![image](https://github.com/pedant/sweet-alert-dialog/raw/master/change_type.gif)
@@ -44,8 +44,6 @@ show material progress
     pDialog.setTitleText("Loading");
     pDialog.setCancelable(false);
     pDialog.show();
-
-![image](https://github.com/pedant/sweet-alert-dialog/raw/master/play_progress.gif)
 
 You can customize progress bar dynamically with materialish-progress methods via **SweetAlertDialog.getProgressHelper()**:
 - resetCount()
@@ -164,30 +162,5 @@ Show the cancel button and bind listener to it：
         })
         .show();
 
-[more android tech shares: pedant.cn](http://www.pedant.cn)
-
-## License
-
-    The MIT License (MIT)
-
-    Copyright (c) 2014 Pedant(http://pedant.cn)
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
 
 
