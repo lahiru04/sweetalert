@@ -19,22 +19,31 @@ The simplest way to use SweetAlertDialog is to add the library as aar dependency
 
 **Maven**
 
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
     <dependency>
-      <groupId>cn.pedant.sweetalert</groupId>
-      <artifactId>library</artifactId>
-      <version>1.3</version>
-      <type>aar</type>
-    </dependency>
+	    <groupId>com.github.lahiru04</groupId>
+	    <artifactId>sweetalert</artifactId>
+	    <version>v1.0.4</version>
+	</dependency>
 
 **Gradle**
 
-    repositories {
-        mavenCentral()
-    }
+  allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 
-    dependencies {
-        compile 'cn.pedant.sweetalert:library:1.3'
-    }
+   dependencies {
+	        implementation 'com.github.lahiru04:sweetalert:v1.0.4'
+	}
 
 ## Usage
 
