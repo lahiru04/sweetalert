@@ -34,14 +34,14 @@ The simplest way to use SweetAlertDialog is to add the library as aar dependency
 
 **Gradle**
 
-  allprojects {
+    allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
 
-   dependencies {
+    dependencies {
 	        implementation 'com.github.lahiru04:sweetalert:v1.0.4'
 	}
 
