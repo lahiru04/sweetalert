@@ -19,7 +19,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                new SweetAlertDialog(MainActivity.this, SweetAlertDialog.ERROR_TYPE).setTitleText("bla").setContentText("poo poo").show();
+                new SweetAlertDialog(MainActivity.this, SweetAlertDialog.WARNING_TYPE).
+                        setTitleText("bla").setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sweetAlertDialog) {
+                        sweetAlertDialog.dismissWithAnimation();
+                    }
+                }).setCancelText("xxx").setContentText("poo poo").show();
 
             }
         });
